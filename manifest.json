@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "YCLIENTS Email Helper",
+  "version": "1.0",
+  "description": "Добавляет иконку письма и mailto-ссылку к email на страницах YCLIENTS.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://yclients.ru/timetable/*",
+        "https://yclients.com/clients/*/base*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ]
+}
